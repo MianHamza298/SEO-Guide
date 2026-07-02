@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="ur-Latn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEO 0 to Hero — Complete A to Z Master Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F7F2E7;
+  --panel:#FFFFFF;
+  --ink:#15202E;
+  --muted:#5B6472;
+  --line:#E6DFCC;
+  --coral:#FF5A3C;
+  --teal:#0E9C90;
+  --amber:#E39B33;
+  --navy-deep:#0E1A2B;
+  --pos-badge:#0E9C90;
+  --radius:14px;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Inter',sans-serif;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,.display{ font-family:'Fraunces',serif; letter-spacing:-0.01em; }
+.mono{ font-family:'JetBrains Mono',monospace; }
+a{ color:inherit; }
+img{max-width:100%;}
+
+/* ===== texture bg ===== */
+body::before{
+  content:"";
+  position:fixed; inset:0; z-index:-1;
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(21,32,46,0.05) 1px, transparent 0);
+  background-size:22px 22px;
+  pointer-events:none;
+}
+
+/* ===== layout ===== */
+.shell{ display:flex; max-width:1400px; margin:0 auto; }
+.side{
+  width:250px; flex-shrink:0;
+  position:sticky; top:0; height:100vh;
+  overflow-y:auto;
+  padding:28px 18px 40px 28px;
+  border-right:1px solid var(--line);
+}
+.side::-webkit-scrollbar{width:6px;}
+.side::-webkit-scrollbar-thumb{background:var(--line); border-radius:4px;}
+.brand{ display:flex; align-items:center; gap:10px; margin-bottom:26px; }
+.brand-mark{
+  width:34px; height:34px; border-radius:9px;
+  background:var(--navy-deep);
+  display:flex; align-items:center; justify-content:center;
+  color:#fff; font-family:'JetBrains Mono'; font-weight:700; font-size:13px;
+}
+.brand-name{ font-family:'Fraunces',serif; font-weight:700; font-size:17px; }
+.side nav{ display:flex; flex-direction:column; gap:2px; }
+.side nav a{
+  text-decoration:none; color:var(--muted); font-size:13.5px;
+  padding:7px 10px; border-radius:8px; display:flex; gap:8px; align-items:baseline;
+  transition:background .15s, color .15s;
+}
+.side nav a .num{ font-family:'JetBrains Mono'; font-size:11px; color:var(--coral); width:16px; flex-shrink:0;}
+.side nav a:hover{ background:var(--panel); color:var(--ink); }
+.main{ flex:1; min-width:0; }
+
+/* ===== hero ===== */
+.hero{
+  position:relative;
+  padding:64px 56px 54px;
+  border-bottom:1px solid var(--line);
+  overflow:hidden;
+}
+.hero .kicker{
+  font-family:'JetBrains Mono'; font-size:12px; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--teal); display:flex; align-items:center; gap:8px; margin-bottom:18px;
+}
+.hero .kicker::before{ content:""; width:26px; height:1px; background:var(--teal); }
+.hero h1{
+  font-size:clamp(34px,5vw,58px); font-weight:700; line-height:1.03; max-width:820px;
+}
+.hero h1 em{ font-style:normal; color:var(--coral); }
+.hero p.lede{
+  margin-top:20px; max-width:600px; color:var(--muted); font-size:16.5px;
+}
+.hero .stats{ display:flex; gap:34px; margin-top:38px; flex-wrap:wrap; }
+.hero .stat b{ font-family:'Fraunces',serif; font-size:30px; display:block; }
+.hero .stat span{ font-size:12px; color:var(--muted); text-transform:uppercase; letter-spacing:.06em; }
+.serp-card{
+  position:absolute; right:56px; top:64px; width:280px;
+  background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
+  padding:16px 18px; box-shadow:0 18px 40px -20px rgba(14,26,43,.35);
+  display:none;
+}
+@media(min-width:1150px){ .serp-card{ display:block; } }
+.serp-card .url{ font-family:'JetBrains Mono'; font-size:11px; color:var(--teal); }
+.serp-card .title{ font-family:'Fraunces',serif; font-size:15px; margin:4px 0 6px; color:#1a0dab; }
+.serp-card .desc{ font-size:12px; color:var(--muted); line-height:1.5;}
+
+/* ===== module section ===== */
+section.module{ padding:56px 56px 10px; border-bottom:1px solid var(--line); scroll-margin-top:14px;}
+.mod-head{ display:flex; gap:18px; align-items:flex-start; margin-bottom:8px;}
+.pos-badge{
+  flex-shrink:0; width:44px; height:44px; border-radius:50%;
+  background:var(--pos-badge); color:#fff;
+  display:flex; align-items:center; justify-content:center;
+  font-family:'JetBrains Mono'; font-weight:700; font-size:16px;
+  box-shadow:0 0 0 5px rgba(14,156,144,.12);
+}
+.mod-title-wrap .eyebrow{ font-family:'JetBrains Mono'; font-size:11.5px; color:var(--coral); text-transform:uppercase; letter-spacing:.08em;}
+.mod-title-wrap h2{ font-size:clamp(22px,3vw,32px); font-weight:600; margin-top:2px;}
+.mod-desc{ color:var(--muted); max-width:760px; margin:14px 0 30px; font-size:15px;}
+
+/* icon grid cards */
+.grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:14px; margin-bottom:30px;}
+.card{
+  background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
+  padding:16px; display:flex; gap:12px; align-items:flex-start;
+}
+.icon-badge{
+  flex-shrink:0; width:38px; height:38px; border-radius:10px;
+  display:flex; align-items:center; justify-content:center;
+  color:#fff;
+}
+.icon-badge svg{ width:19px; height:19px; stroke:#fff; fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round;}
+.card h4{ font-size:14.5px; font-weight:700; margin-bottom:3px;}
+.card p{ font-size:12.5px; color:var(--muted); line-height:1.45;}
+
+/* tool cards (tighter, with tag) */
+.tool-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:12px; margin-bottom:8px;}
+.tool-card{
+  background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:13px 14px;
+}
+.tool-card .top{ display:flex; align-items:center; gap:10px; margin-bottom:6px;}
+.tool-card .mini-icon{
+  width:28px; height:28px; border-radius:8px; flex-shrink:0;
+  display:flex; align-items:center; justify-content:center; color:#fff;
+}
+.tool-card .mini-icon svg{ width:14px; height:14px; stroke:#fff; fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round;}
+.tool-card b{ font-size:13.5px;}
+.tool-card p{ font-size:11.5px; color:var(--muted); line-height:1.4;}
+
+.subhead{ display:flex; align-items:center; gap:10px; margin:26px 0 14px;}
+.subhead .line{ flex:1; height:1px; background:var(--line);}
+.subhead h3{ font-size:16px; font-weight:700; font-family:'JetBrains Mono'; white-space:nowrap;}
+
+/* chart panel */
+.chart-panel{
+  background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
+  padding:22px 24px 14px; margin:24px 0 34px;
+}
+.chart-panel .cp-head{ display:flex; justify-content:space-between; align-items:baseline; margin-bottom:14px; flex-wrap:wrap; gap:6px;}
+.chart-panel h4{ font-size:15px; font-weight:700;}
+.chart-panel .note{ font-size:11px; color:var(--muted); font-family:'JetBrains Mono';}
+.chart-wrap{ position:relative; height:280px; }
+.chart-wrap.short{ height:220px; }
+.two-col-charts{ display:grid; grid-template-columns:1fr 1fr; gap:20px;}
+@media(max-width:800px){ .two-col-charts{ grid-template-columns:1fr; } .hero{padding:48px 22px;} section.module{padding:40px 22px;} .side{display:none;} }
+
+/* simple list */
+ul.check-list{ list-style:none; display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:8px 18px; margin:10px 0 28px;}
+ul.check-list li{ font-size:13.5px; display:flex; gap:8px; align-items:flex-start; color:var(--ink);}
+ul.check-list li::before{ content:"✓"; color:var(--teal); font-weight:700; flex-shrink:0;}
+
+/* workflow steps */
+.workflow{ display:flex; flex-wrap:wrap; gap:10px; margin:20px 0 30px;}
+.wf-step{
+  background:var(--panel); border:1px solid var(--line); border-radius:12px;
+  padding:12px 14px; flex:1 1 150px; min-width:150px;
+  border-top:3px solid var(--coral);
+}
+.wf-step .n{ font-family:'JetBrains Mono'; color:var(--coral); font-size:11px;}
+.wf-step b{ font-size:13px; display:block; margin-top:3px;}
+
+/* hub-spoke pillar diagram */
+.pillar-wrap{ display:flex; justify-content:center; margin:20px 0 30px;}
+
+/* case study cards */
+.case-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:16px; margin-bottom:20px;}
+.case-card{ background:var(--navy-deep); color:#EDEBE3; border-radius:var(--radius); padding:20px;}
+.case-card .tag{ font-family:'JetBrains Mono'; font-size:10.5px; color:var(--amber); text-transform:uppercase; letter-spacing:.08em;}
+.case-card h4{ font-size:16px; margin:6px 0 8px; font-family:'Fraunces',serif;}
+.case-card ol{ padding-left:18px; font-size:12.5px; color:#B9C0CC; line-height:1.7;}
+
+/* checklist boxes */
+.checklist-panel{ background:var(--panel); border:1px solid var(--line); border-radius:var(--radius); padding:18px 20px; margin-bottom:14px;}
+.checklist-panel h4{ font-size:14.5px; margin-bottom:10px; display:flex; align-items:center; gap:8px;}
+.checklist-panel .badge{ background:var(--teal); color:#fff; font-size:10px; padding:2px 8px; border-radius:20px; font-family:'JetBrains Mono';}
+.checklist-panel ul{ list-style:none; columns:2; column-gap:20px;}
+.checklist-panel li{ font-size:12.5px; margin-bottom:6px; break-inside:avoid; display:flex; gap:6px;}
+.checklist-panel li::before{ content:"☐"; color:var(--coral); flex-shrink:0;}
+@media(max-width:640px){ .checklist-panel ul{columns:1;} }
+
+footer{ padding:40px 56px 60px; color:var(--muted); font-size:12.5px; text-align:center;}
+
+.badge-row{ display:flex; gap:8px; flex-wrap:wrap; margin-top:14px;}
+.pill{ font-family:'JetBrains Mono'; font-size:11px; background:var(--panel); border:1px solid var(--line); padding:5px 11px; border-radius:20px;}
+
+/* ===== self-contained charts (no external JS) ===== */
+.hbar-chart .row{ display:flex; align-items:center; gap:12px; margin-bottom:12px;}
+.hbar-chart .row:last-child{ margin-bottom:0;}
+.hbar-chart .label{ width:180px; flex-shrink:0; font-size:12.5px; font-weight:600;}
+.hbar-chart .track{ flex:1; height:16px; background:#EFE8D4; border-radius:8px; overflow:hidden;}
+.hbar-chart .fill{ height:100%; border-radius:8px; display:flex; align-items:center; justify-content:flex-end; padding-right:8px;}
+.hbar-chart .val{ width:44px; text-align:right; font-family:'JetBrains Mono'; font-size:12px; flex-shrink:0; color:var(--muted);}
+
+.vbar-chart{ display:flex; align-items:flex-end; gap:22px; height:220px; padding:0 10px;}
+.vbar-chart .col{ flex:1; display:flex; flex-direction:column; align-items:center; justify-content:flex-end; height:100%;}
+.vbar-chart .bar{ width:100%; max-width:64px; border-radius:8px 8px 3px 3px; position:relative;}
+.vbar-chart .bar .tag{ position:absolute; top:-22px; left:0; right:0; text-align:center; font-family:'JetBrains Mono'; font-size:12px; font-weight:700; color:var(--ink);}
+.vbar-chart .name{ margin-top:10px; font-size:12px; color:var(--muted); text-align:center;}
+
+.donut-chart{ display:flex; align-items:center; gap:28px; flex-wrap:wrap; justify-content:center;}
+.donut-chart .legend{ display:flex; flex-direction:column; gap:9px;}
+.donut-chart .legend .li{ display:flex; align-items:center; gap:9px; font-size:12.5px;}
+.donut-chart .legend .sw{ width:11px; height:11px; border-radius:3px; flex-shrink:0;}
+.donut-chart .legend b{ font-family:'JetBrains Mono'; margin-left:auto; padding-left:14px;}
+
+.range-chart .row{ margin-bottom:18px; }
+.range-chart .row:last-child{ margin-bottom:4px; }
+.range-chart .head{ display:flex; justify-content:space-between; font-size:12.5px; font-weight:700; margin-bottom:6px;}
+.range-chart .head span{ font-family:'JetBrains Mono'; font-weight:400; color:var(--muted); font-size:11px;}
+.range-chart .segments{ display:flex; height:14px; border-radius:7px; overflow:hidden;}
+.range-chart .seg{ height:100%; }
+.range-chart .marks{ display:flex; margin-top:5px; font-family:'JetBrains Mono'; font-size:10.5px; color:var(--muted);}
+.range-chart .marks span{ flex:1; text-align:left;}
+
+.dualbar-chart .row{ margin-bottom:14px;}
+.dualbar-chart .row:last-child{ margin-bottom:0;}
+.dualbar-chart .name{ font-size:12.5px; font-weight:600; margin-bottom:5px;}
+.dualbar-chart .track{ display:flex; align-items:center; gap:8px; margin-bottom:3px;}
+.dualbar-chart .track .lbl{ width:60px; font-family:'JetBrains Mono'; font-size:10.5px; color:var(--muted); flex-shrink:0;}
+.dualbar-chart .track .bg{ flex:1; height:11px; background:#EFE8D4; border-radius:6px; overflow:hidden;}
+.dualbar-chart .track .bg .fill{ height:100%; border-radius:6px;}
+
+.linechart-legend{ display:flex; gap:18px; margin-bottom:10px; font-size:12px;}
+.linechart-legend .li{ display:flex; align-items:center; gap:7px;}
+.linechart-legend .sw{ width:16px; height:3px; border-radius:2px;}
+</style>
+</head>
+<body>
+
+<!-- ICON SPRITE -->
+<svg width="0" height="0" style="position:absolute">
+<defs>
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></symbol>
+<symbol id="i-bar" viewBox="0 0 24 24"><line x1="6" y1="20" x2="6" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="18" y1="20" x2="18" y2="14"/></symbol>
+<symbol id="i-pie" viewBox="0 0 24 24"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></symbol>
+<symbol id="i-link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.07 0l2.83-2.83a5 5 0 0 0-7.07-7.07L11.5 4.5"/><path d="M14 11a5 5 0 0 0-7.07 0L4.1 13.83a5 5 0 0 0 7.07 7.07L12.5 19.5"/></symbol>
+<symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 1 1-5.66 5.66L4 17l3 3 5.03-5.03a4 4 0 1 1 5.66-5.66z"/></symbol>
+<symbol id="i-bot" viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="12" rx="2"/><circle cx="9" cy="14" r="1"/><circle cx="15" cy="14" r="1"/><path d="M12 8V4"/><circle cx="12" cy="3" r="1"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+<symbol id="i-file" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></symbol>
+<symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5.5 3.5 9.7 8 11 4.5-1.3 8-5.5 8-11V5z"/></symbol>
+<symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 2 2 7l10 5 10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></symbol>
+<symbol id="i-trend" viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></symbol>
+<symbol id="i-code" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 16 14"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+<symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18z"/></symbol>
+<symbol id="i-cart" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 2-1.58l1.65-7.42H5.12"/></symbol>
+<symbol id="i-flag" viewBox="0 0 24 24"><path d="M4 22V4"/><path d="M4 4h14l-3 5 3 5H4"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></symbol>
+<symbol id="i-message" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-4-1L3 20l1-4.5A8.38 8.38 0 0 1 3.5 12 8.5 8.5 0 0 1 12 3.5a8.38 8.38 0 0 1 9 8z"/></symbol>
+<symbol id="i-zap" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10"/></symbol>
+<symbol id="i-repeat" viewBox="0 0 24 24"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></symbol>
+<symbol id="i-book" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></symbol>
+<symbol id="i-eye" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></symbol>
+<symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></symbol>
+</defs>
+</svg>
+
+<div class="shell">
+  <aside class="side">
+    <div class="brand">
+      <div class="brand-mark">SE</div>
+      <div class="brand-name">SEO Guide</div>
+    </div>
+    <nav>
+      <a href="#m1"><span class="num">01</span> Fundamentals</a>
+      <a href="#m2"><span class="num">02</span> Keyword Research</a>
+      <a href="#m3"><span class="num">03</span> Best Tools</a>
+      <a href="#m4"><span class="num">04</span> Chrome Extensions</a>
+      <a href="#m5"><span class="num">05</span> Keyword Finding</a>
+      <a href="#m6"><span class="num">06</span> Competitor Research</a>
+      <a href="#m7"><span class="num">07</span> Content SEO</a>
+      <a href="#m8"><span class="num">08</span> Technical SEO</a>
+      <a href="#m9"><span class="num">09</span> Link Building</a>
+      <a href="#m10"><span class="num">10</span> Local SEO</a>
+      <a href="#m11"><span class="num">11</span> AI SEO / GEO</a>
+      <a href="#m12"><span class="num">12</span> Analytics</a>
+      <a href="#m13"><span class="num">13</span> SEO Workflow</a>
+      <a href="#m14"><span class="num">14</span> Checklists</a>
+      <a href="#m15"><span class="num">15</span> Case Studies</a>
+    </nav>
+  </aside>
+
+  <main class="main">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="kicker">Complete Master Guide · 15 Modules</div>
+      <h1>SEO <em>0 to Hero</em> — Beginner se Agency Level tak</h1>
+      <p class="lede">Yeh ek complete A to Z reference hai — SEO fundamentals se lekar advanced technical audits, link building, local SEO, AI SEO/GEO aur real case studies tak. Har module icons aur data visualizations ke sath.</p>
+      <div class="stats">
+        <div class="stat"><b>15</b><span>Modules</span></div>
+        <div class="stat"><b>50+</b><span>Tools Covered</span></div>
+        <div class="stat"><b>13</b><span>Extensions</span></div>
+        <div class="stat"><b>8</b><span>Checklists</span></div>
+        <div class="stat"><b>6</b><span>Case Studies</span></div>
+      </div>
+      <div class="serp-card">
+        <div class="url">www.yoursite.com › seo-guide</div>
+        <div class="title">SEO 0 to Hero: Complete Master Guide 2026</div>
+        <div class="desc">Fundamentals, tools, on-page, technical, link building, local SEO aur AI SEO — sab ek jagah. Beginner-friendly, agency-ready.</div>
+      </div>
+    </section>
+
+    <!-- MODULE 1 -->
+    <section class="module" id="m1">
+      <div class="mod-head">
+        <div class="pos-badge">1</div>
+        <div class="mod-title-wrap">
+          <div class="eyebrow">Foundation</div>
+          <h2>SEO Fundamentals</h2>
+        </div>
+      </div>
+      <p class="mod-desc">Search engines kis tarah kaam karte hain, ranking factors kya hain, aur SEO ki har major category (on-page, off-page, technical, local, international, e-commerce, AI/GEO) ka bunyadi taaruf.</p>
+
+      <div class="grid">
+        <div class="card"><div class="icon-badge" style="background:var(--coral)"><svg><use href="#i-search"/></svg></div><div><h4>SEO Kya Hai?</h4><p>Website ko search engines (Google, Bing) me organic (bina paid ads) top rank dilwane ka process.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--teal)"><svg><use href="#i-globe"/></svg></div><div><h4>Search Engine Kaise Kaam Karta Hai</h4><p>Crawling → Indexing → Ranking. Bots pages crawl karte, content ko index me store karte, phir query ke hisaab se rank karte hain.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--amber)"><svg><use href="#i-trend"/></svg></div><div><h4>Google Ranking Factors</h4><p>Content quality, backlinks, UX/Core Web Vitals, on-page relevance, technical health aur E-E-A-T signals.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--navy-deep)"><svg><use href="#i-shield"/></svg></div><div><h4>White Hat vs Black Hat</h4><p>White Hat = guidelines follow karke long-term growth. Black Hat = shortcuts (keyword stuffing, cloaking) jo penalty laate hain.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--coral)"><svg><use href="#i-file"/></svg></div><div><h4>On-Page SEO</h4><p>Title, meta, headings, content, internal links — jo page ke andar control hota hai.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--teal)"><svg><use href="#i-link"/></svg></div><div><h4>Off-Page SEO</h4><p>Backlinks, mentions, social signals — website ke bahar authority build karna.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--amber)"><svg><use href="#i-wrench"/></svg></div><div><h4>Technical SEO</h4><p>Crawlability, indexing, speed, schema, site architecture ki health.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--navy-deep)"><svg><use href="#i-pin"/></svg></div><div><h4>Local SEO</h4><p>Google Business Profile aur "near me" searches ke liye local visibility.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--coral)"><svg><use href="#i-flag"/></svg></div><div><h4>International SEO</h4><p>Hreflang, multi-language/multi-country targeting ke liye setup.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--teal)"><svg><use href="#i-cart"/></svg></div><div><h4>E-commerce SEO</h4><p>Product/category pages, filters, structured data aur duplicate content handling.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--amber)"><svg><use href="#i-bot"/></svg></div><div><h4>AI SEO & GEO</h4><p>ChatGPT, Gemini, Perplexity jaisi AI answer engines me visible hone ki optimization (Generative Engine Optimization).</p></div></div>
+      </div>
+
+      <div class="subhead"><h3>▸ Ranking Factors — Illustrative Weightage</h3><div class="line"></div></div>
+      <div class="two-col-charts">
+        <div class="chart-panel">
+          <div class="cp-head"><h4>Google Ranking Factors (Conceptual Breakdown)</h4><span class="note">for learning purposes only</span></div>
+          <div class="hbar-chart">
+            <div class="row"><div class="label">Content Quality</div><div class="track"><div class="fill" style="width:96%;background:#FF5A3C"></div></div><div class="val">24%</div></div>
+            <div class="row"><div class="label">Backlinks / Authority</div><div class="track"><div class="fill" style="width:80%;background:#0E9C90"></div></div><div class="val">20%</div></div>
+            <div class="row"><div class="label">UX &amp; Core Web Vitals</div><div class="track"><div class="fill" style="width:64%;background:#E39B33"></div></div><div class="val">16%</div></div>
+            <div class="row"><div class="label">On-Page Relevance</div><div class="track"><div class="fill" style="width:60%;background:#15202E"></div></div><div class="val">15%</div></div>
+            <div class="row"><div class="label">Technical Health</div><div class="track"><div class="fill" style="width:48%;background:#FF5A3C"></div></div><div class="val">12%</div></div>
+            <div class="row"><div class="label">E-E-A-T Signals</div><div class="track"><div class="fill" style="width:32%;background:#0E9C90"></div></div><div class="val">8%</div></div>
+            <div class="row"><div class="label">Local Signals</div><div class="track"><div class="fill" style="width:20%;background:#E39B33"></div></div><div class="val">5%</div></div>
+          </div>
+        </div>
+        <div class="chart-panel">
+          <div class="cp-head"><h4>SEO Ke 3 Core Pillars</h4><span class="note">on-page / off-page / technical</span></div>
+          <div class="donut-chart">
+            <svg width="220" height="220" viewBox="0 0 260 260">
+              <path d="M20.00,130.00 A110,110 0 0 1 188.94,37.12 L166.44,72.59 A68,68 0 0 0 62.00,130.00 Z" fill="#FF5A3C" transform="translate(15,15)"/>
+              <path d="M188.94,37.12 A110,110 0 0 1 182.99,226.39 L162.76,189.59 A68,68 0 0 0 166.44,72.59 Z" fill="#0E9C90" transform="translate(15,15)"/>
+              <path d="M182.99,226.39 A110,110 0 0 1 20.00,130.00 L62.00,130.00 A68,68 0 0 0 162.76,189.59 Z" fill="#E39B33" transform="translate(15,15)"/>
+              <text x="130" y="124" text-anchor="middle" font-family="Fraunces,serif" font-size="26" font-weight="700" fill="#15202E">3</text>
+              <text x="130" y="144" text-anchor="middle" font-family="JetBrains Mono" font-size="11" fill="#5B6472">Pillars</text>
+            </svg>
+            <div class="legend">
+              <div class="li"><span class="sw" style="background:#FF5A3C"></span>On-Page SEO<b>34%</b></div>
+              <div class="li"><span class="sw" style="background:#0E9C90"></span>Off-Page SEO<b>33%</b></div>
+              <div class="li"><span class="sw" style="background:#E39B33"></span>Technical SEO<b>33%</b></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODULE 2 -->
+    <section class="module" id="m2">
+      <div class="mod-head">
+        <div class="pos-badge">2</div>
+        <div class="mod-title-wrap">
+          <div class="eyebrow">Research</div>
+          <h2>Keyword Research</h2>
+        </div>
+      </div>
+      <p class="mod-desc">User jo words search bar me type karta hai — unhe dhoondna aur unke peeche ki "intent" (irada) samajhna.</p>
+
+      <div class="subhead"><h3>▸ Search Intent Types</h3><div class="line"></div></div>
+      <div class="grid">
+        <div class="card"><div class="icon-badge" style="background:var(--teal)"><svg><use href="#i-book"/></svg></div><div><h4>Informational</h4><p>"kya", "kaise", "why" — sirf jaankari chahiye. Example: "seo kya hai".</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--coral)"><svg><use href="#i-cart"/></svg></div><div><h4>Commercial</h4><p>Compare/review karne ki niyat. Example: "best seo tools 2026".</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--amber)"><svg><use href="#i-zap"/></svg></div><div><h4>Transactional</h4><p>Buy/signup karne ka irada. Example: "ahrefs pricing buy".</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--navy-deep)"><svg><use href="#i-target"/></svg></div><div><h4>Navigational</h4><p>Specific brand/site dhoondna. Example: "google search console login".</p></div></div>
+      </div>
+
+      <div class="subhead"><h3>▸ Keyword Types</h3><div class="line"></div></div>
+      <ul class="check-list">
+        <li><b>Short Tail</b> — 1-2 words, high volume, high competition (e.g. "SEO")</li>
+        <li><b>Long Tail</b> — 4+ words, specific, easier to rank (e.g. "SEO kaise sikhein beginners ke liye")</li>
+        <li><b>LSI Keywords</b> — semantically related terms jo topic context deep karte hain</li>
+        <li><b>Topical Keywords</b> — ek broad topic cluster ke sub-keywords</li>
+        <li><b>Question Keywords</b> — "kaise", "kya", "kyun" se shuru hone wale queries</li>
+        <li><b>Seasonal Keywords</b> — time/event specific spikes (e.g. "eid offers")</li>
+      </ul>
+
+      <div class="chart-panel">
+        <div class="cp-head"><h4>Search Intent — Typical Query Distribution</h4><span class="note">illustrative %</span></div>
+        <div class="vbar-chart">
+          <div class="col"><div class="bar" style="height:100%;background:#0E9C90"><span class="tag">65%</span></div><div class="name">Informational</div></div>
+          <div class="col"><div class="bar" style="height:23%;background:#E39B33"><span class="tag">15%</span></div><div class="name">Navigational</div></div>
+          <div class="col"><div class="bar" style="height:18%;background:#FF5A3C"><span class="tag">12%</span></div><div class="name">Commercial</div></div>
+          <div class="col"><div class="bar" style="height:12%;background:#15202E"><span class="tag">8%</span></div><div class="name">Transactional</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODULE 3 -->
+    <section class="module" id="m3">
+      <div class="mod-head">
+        <div class="pos-badge">3</div>
+        <div class="mod-title-wrap">
+          <div class="eyebrow">Toolbox</div>
+          <h2>Best SEO Tools — Complete List</h2>
+        </div>
+      </div>
+      <p class="mod-desc">Category-wise sabse trusted tools jo agencies aur professionals daily use karte hain.</p>
+
+      <div class="subhead"><h3>▸ Keyword Research</h3><div class="line"></div></div>
+      <div class="tool-grid">
+        <div class="tool-card"><div class="top"><div class="mini-icon" style="background:var(--coral)"><svg><use href="#i-search"/></svg></div><b>Ahrefs</b></div><p>All-in-one — keywords, backlinks, audits, rank tracking.</p></div>
+        <div class="tool-card"><div class="top"><div class="mini-icon" style="background:var(--teal)"><svg><use href="#i-search"/></svg></div><b>SEMrush</b></div><p>Keyword + competitor + PPC research suite.</p></div>
+        <div class="tool-card"><div class="top"><div class="mini-icon" style="background:var(--amber)"><svg><use href="#i-search"/></svg></div><b>Google Keyword Planner</b></div><p>Free, Google Ads data se direct volume estimate.</p></div>
+        <div class="tool-card"><div class="top"><div class="mini-icon" style="background:var(--navy-deep)"><svg><use href="#i-search"/></svg></div><b>Ubersuggest</b></div><p>Beginner-friendly, affordable keyword + content ideas.</p></div>
+        <div class="tool-card"><div class="top"><div class="mini-icon" style="background:var(--coral)"><svg><use href="#i-search"/></svg></div><b>KWFinder</b></div><p>Low competition long-tail keywords dhoondne ke liye best.</p></div>
+        <div class="tool-card"><div class="top"><div class="mini-icon" style="background:var(--teal)"><svg><use href="#i-search"/></svg></div><b>LowFruits</b></div><p>"Easy to rank" weak-SERP keywords nikalta hai.</p></div>
+        <div class="tool-card"><div class="top"><div class="mini-icon" style="background:var(--amber)"><svg><use href="#i-search"/></svg></div><b>KeywordTool.io</b></div><p>Google autocomplete-based bulk keyword generator.</p></div>
+        <div class="tool-card"><div class="top"><div class="mini-icon" style="background:var(--navy-deep)"><svg><use href="#i-message"/></svg></div><b>AnswerThePublic</b></div><p>Question-based keywords ka visual map.</p></div>
+        <div class="tool-card"><div class="top"><div class="mini-icon" style="background:var(--coral)"><svg><use href="#i-message"/></svg></div><b>AlsoAsked</b></div><p>"People Also Ask" data ka tree/branch view.</p></div>
+      </div>
+
+      <div class="subhead"><h3>▸ Competitor Analysis</h3><div class="line"></div></div>
+      <div class="tool-grid">
+        <div class="tool-card"><div class="top"><div class="mini-icon" style="background:var(--teal)"><svg><use href="#i-eye"/></svg></div><b>Ahrefs</b></div><p>Competitor ke top pages aur keyword gaps.</p></div>
+        <div class="tool-card"><div class="top"><div class="mini-icon" style="background:var(--amber)"><svg><use href="#i-eye"/></svg></div><b>SEMrush</b></div><p>Full domain vs domain comparison reports.</p></div>
+        <div class="tool-card"><div class="top"><div class="mini-icon" style="background:var(--navy-deep)"><svg><use href="#i-eye"/></svg></div><b>Similarweb</b></div><p>Traffic sources aur estimated visits.</p></div>
+        <div class="tool-card"><div class="top"><div class="mini-icon" style="background:var(--coral)"><svg><use href="#i-eye"/></svg></div><b>SpyFu</b></div><p>Competitor ke PPC + organic keyword history.</p></div>
+        <div class="tool-card"><div class="top"><div class="mini-icon" style="background:var(--teal)"><svg><use href="#i-eye"/></svg></div><b>Moz</b></div><p>Domain Authority aur link comparisons.</p></div>
+        <div class="tool-card"><div class="top"><div class="mini-icon" style="background:var(--amber)"><svg><use href="#i-eye"/></svg></div><b>SE Ranking</b></div><p>All-in-one budget-friendly competitor suite.</p></div>
+      </div>
+
+      <div class="subhead"><h3>▸ Technical SEO</h3><div class="line"></div></div>
+      <div class="tool-grid">
+        <div class="tool-card"><div class="top"><div class="mini-icon" style="background:var(--navy-deep)"><svg><use href="#i-wrench"/></svg></div><b>Screaming Frog</b></div><p>Full site crawler — broken links, redirects, metadata audit.</p></div>
+        <div class="tool-card"><div class="top"><div class="mini-icon" style="background:var(--coral)"><svg><use href="#i-wrench"/></svg></div><b>Sitebulb</b></div><p>Visual crawl reports aur prioritized issues.</p></div>
+        <div class="tool-card"><div class="top"><div class="mini-icon" style="background:var(--teal)"><svg><use href="#i-wrench"/></svg></div><b>Google Search Console</b></div><p>Free — indexing, performance, coverage errors.</p></div>
+        <div class="tool-card"><div class="top"><div class="mini-icon" style="background:var(--amber)"><svg><use href="#i-wrench"/></svg></div><b>Bing Webmaster Tools</b></div><p>Bing ke liye indexing + diagnostics.</p></div>
+        <div class="tool-card"><div class="top"><div class="mini-icon" style="background:var(--navy-deep)"><svg><use href="#i-zap"/></svg></div><b>GTmetrix</b></div><p>Page speed waterfall analysis.</p></div>
+        <div class="tool-card"><div class="top"><div class="mini-icon" style="background:var(--coral)"><svg><use href="#i-zap"/></svg></div><b>PageSpeed Insights</b></div><p>Core Web Vitals ka official Google score.</p></div>
+      </div>
+
+      <div class="subhead"><h3>▸ Content Optimization</h3><div class="line"></div></div>
+      <div class="tool-grid">
+        <div class="tool-card"><div class="top"><div class="mini-icon" style="background:var(--teal)"><svg><use href="#i-file"/></svg></div><b>Surfer SEO</b></div><p>Data-driven content score aur competitor NLP terms.</p></div>
+        <div class="tool-card"><div class="top"><div class="mini-icon" style="background:var(--amber)"><svg><use href="#i-file"/></svg></div><b>Frase</b></div><p>AI content briefs aur SERP-based outlines.</p></div>
+        <div class="tool-card"><div class="top"><div class="mini-icon" style="background:var(--navy-deep)"><svg><use href="#i-file"/></svg></div><b>NeuronWriter</b></div><p>Content plan + on-page optimization score.</p></div>
+        <div class="tool-card"><div class="top"><div class="mini-icon" style="background:var(--coral)"><svg><use href="#i-file"/></svg></div><b>Clearscope</b></div><p>Enterprise-grade content grading.</p></div>
+        <div class="tool-card"><div class="top"><div class="mini-icon" style="background:var(--teal)"><svg><use href="#i-file"/></svg></div><b>MarketMuse</b></div><p>Topical authority aur content gap planning.</p></div>
+        <div class="tool-card"><div class="top"><div class="mini-icon" style="background:var(--amber)"><svg><use href="#i-file"/></svg></div><b>RankMath Content AI</b></div><p>WordPress ke andar hi AI content scoring.</p></div>
+      </div>
+
+      <div class="subhead"><h3>▸ Backlink Analysis</h3><div class="line"></div></div>
+      <div class="tool-grid">
+        <div class="tool-card"><div class="top"><div class="mini-icon" style="background:var(--navy-deep)"><svg><use href="#i-link"/></svg></div><b>Ahrefs</b></div><p>Sabse bada backlink index industry me.</p></div>
+        <div class="tool-card"><div class="top"><div class="mini-icon" style="background:var(--coral)"><svg><use href="#i-link"/></svg></div><b>SEMrush</b></div><p>Backlink audit + toxic link detection.</p></div>
+        <div class="tool-card"><div class="top"><div class="mini-icon" style="background:var(--teal)"><svg><use href="#i-link"/></svg></div><b>Majestic</b></div><p>Trust Flow aur Citation Flow metrics.</p></div>
+        <div class="tool-card"><div class="top"><div class="mini-icon" style="background:var(--amber)"><svg><use href="#i-link"/></svg></div><b>Moz Link Explorer</b></div><p>Domain Authority + spam score.</p></div>
+      </div>
+
+      <div class="subhead"><h3>▸ Rank Tracking</h3><div class="line"></div></div>
+      <div class="tool-grid">
+        <div class="tool-card"><div class="top"><div class="mini-icon" style="background:var(--navy-deep)"><svg><use href="#i-trend"/></svg></div><b>SERPWatcher</b></div><p>Simple daily rank tracking dashboard.</p></div>
+        <div class="tool-card"><div class="top"><div class="mini-icon" style="background:var(--coral)"><svg><use href="#i-trend"/></svg></div><b>Wincher</b></div><p>Affordable multi-keyword tracker.</p></div>
+        <div class="tool-card"><div class="top"><div class="mini-icon" style="background:var(--teal)"><svg><use href="#i-trend"/></svg></div><b>Nightwatch</b></div><p>Local + white-label rank tracking.</p></div>
+        <div class="tool-card"><div class="top"><div class="mini-icon" style="background:var(--amber)"><svg><use href="#i-trend"/></svg></div><b>AccuRanker</b></div><p>Enterprise-scale, daily accurate rank updates.</p></div>
+      </div>
+    </section>
+
+    <!-- MODULE 4 -->
+    <section class="module" id="m4">
+      <div class="mod-head">
+        <div class="pos-badge">4</div>
+        <div class="mod-title-wrap">
+          <div class="eyebrow">Browser Add-ons</div>
+          <h2>Chrome Extensions</h2>
+        </div>
+      </div>
+      <p class="mod-desc">Roz ke quick on-the-spot SEO checks ke liye zaroori extensions — purpose, kab use karni hai, aur best situation ke sath.</p>
+
+      <div class="grid">
+        <div class="card"><div class="icon-badge" style="background:var(--coral)"><svg><use href="#i-file"/></svg></div><div><h4>Detailed SEO Extension</h4><p><b>Purpose:</b> Meta tags, headings, status code ek click me. <b>Kab:</b> Quick on-page audit. <b>Best:</b> Live client page check karte waqt.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--teal)"><svg><use href="#i-check"/></svg></div><div><h4>SEO Minion</h4><p><b>Purpose:</b> Broken link check, hreflang, SERP preview. <b>Kab:</b> Publish se pehle final check. <b>Best:</b> QA/testing phase.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--amber)"><svg><use href="#i-bar"/></svg></div><div><h4>MozBar</h4><p><b>Purpose:</b> DA/PA score directly SERP par. <b>Kab:</b> Backlink prospect evaluate karte waqt. <b>Best:</b> Outreach research.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--navy-deep)"><svg><use href="#i-link"/></svg></div><div><h4>Ahrefs SEO Toolbar</h4><p><b>Purpose:</b> Backlinks, traffic, on-page data overlay. <b>Kab:</b> Competitor page analyze karte waqt. <b>Best:</b> Deep-dive research.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--coral)"><svg><use href="#i-search"/></svg></div><div><h4>Keywords Everywhere</h4><p><b>Purpose:</b> Search volume + CPC har page par dikhata hai. <b>Kab:</b> Browsing ke dauran keyword ideas. <b>Best:</b> Casual research.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--teal)"><svg><use href="#i-eye"/></svg></div><div><h4>Similarweb</h4><p><b>Purpose:</b> Traffic estimate + sources. <b>Kab:</b> Competitor traffic gauge karna. <b>Best:</b> Market research.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--amber)"><svg><use href="#i-code"/></svg></div><div><h4>Wappalyzer</h4><p><b>Purpose:</b> Website ka tech stack detect karta hai. <b>Kab:</b> Client/competitor CMS pata karna. <b>Best:</b> Tech audits.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--navy-deep)"><svg><use href="#i-zap"/></svg></div><div><h4>Lighthouse</h4><p><b>Purpose:</b> Performance, SEO, accessibility score. <b>Kab:</b> Speed audit. <b>Best:</b> Core Web Vitals debugging.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--coral)"><svg><use href="#i-code"/></svg></div><div><h4>Web Developer</h4><p><b>Purpose:</b> CSS/JS disable, outline elements. <b>Kab:</b> Structure inspect karna. <b>Best:</b> Technical debugging.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--teal)"><svg><use href="#i-file"/></svg></div><div><h4>META SEO Inspector</h4><p><b>Purpose:</b> Meta + schema markup detail view. <b>Kab:</b> Schema validate karna. <b>Best:</b> Rich snippet debugging.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--amber)"><svg><use href="#i-repeat"/></svg></div><div><h4>Redirect Path</h4><p><b>Purpose:</b> Redirect chains + status codes track karta hai. <b>Kab:</b> Migration ke baad. <b>Best:</b> Redirect audits.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--navy-deep)"><svg><use href="#i-link"/></svg></div><div><h4>Link Grabber</h4><p><b>Purpose:</b> Page ke saare links bulk export. <b>Kab:</b> Internal linking review. <b>Best:</b> Large content pages.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--coral)"><svg><use href="#i-check"/></svg></div><div><h4>Check My Links</h4><p><b>Purpose:</b> Broken links highlight karta hai. <b>Kab:</b> Content audit. <b>Best:</b> Old blog posts refresh karna.</p></div></div>
+      </div>
+    </section>
+
+    <!-- MODULE 5 -->
+    <section class="module" id="m5">
+      <div class="mod-head">
+        <div class="pos-badge">5</div>
+        <div class="mod-title-wrap">
+          <div class="eyebrow">Discovery</div>
+          <h2>Keyword Find Karna</h2>
+        </div>
+      </div>
+      <p class="mod-desc">Ek "seed keyword" se start karke expand karne ka process — sources jahan se real keyword ideas milte hain.</p>
+      <div class="workflow">
+        <div class="wf-step"><span class="n">SOURCE 01</span><b>Seed Keyword</b></div>
+        <div class="wf-step"><span class="n">SOURCE 02</span><b>Google Suggestions</b></div>
+        <div class="wf-step"><span class="n">SOURCE 03</span><b>People Also Ask</b></div>
+        <div class="wf-step"><span class="n">SOURCE 04</span><b>Related Searches</b></div>
+        <div class="wf-step"><span class="n">SOURCE 05</span><b>Competitor Keywords</b></div>
+        <div class="wf-step"><span class="n">SOURCE 06</span><b>Search Console</b></div>
+      </div>
+      <div class="subhead"><h3>▸ Target Karne Layak Keywords</h3><div class="line"></div></div>
+      <ul class="check-list">
+        <li><b>Low Competition</b> — kam authority sites bhi rank ho rahi hon</li>
+        <li><b>High Traffic</b> — bada search volume</li>
+        <li><b>Easy to Rank</b> — weak SERP + low keyword difficulty</li>
+        <li><b>Buyer Intent</b> — "buy", "price", "best" jaise conversion words</li>
+      </ul>
+    </section>
+
+    <!-- MODULE 6 -->
+    <section class="module" id="m6">
+      <div class="mod-head">
+        <div class="pos-badge">6</div>
+        <div class="mod-title-wrap">
+          <div class="eyebrow">Intel</div>
+          <h2>Competitor Research</h2>
+        </div>
+      </div>
+      <p class="mod-desc">Competitors se seekh kar apni strategy behtar banana — unki strengths ko replicate aur gaps ko exploit karna.</p>
+      <div class="grid">
+        <div class="card"><div class="icon-badge" style="background:var(--coral)"><svg><use href="#i-target"/></svg></div><div><h4>Competitor Kaise Find Karein</h4><p>Google par apna main keyword search karo — top 10 organic results hi asli competitors hain.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--teal)"><svg><use href="#i-search"/></svg></div><div><h4>Unke Keywords Nikalna</h4><p>Ahrefs/SEMrush ke "Organic Keywords" report se domain daal kar poori keyword list mil jati hai.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--amber)"><svg><use href="#i-link"/></svg></div><div><h4>Unke Backlinks Dekhna</h4><p>Backlink profile check karke pata chalta hai kaun se sites unhe link de rahi hain.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--navy-deep)"><svg><use href="#i-file"/></svg></div><div><h4>Unke Top Pages</h4><p>Sabse zyada traffic-driving pages identify karke content ideas milte hain.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--coral)"><svg><use href="#i-globe"/></svg></div><div><h4>Traffic Sources</h4><p>Organic, direct, referral, social — kahan se traffic aa raha hai.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--teal)"><svg><use href="#i-layers"/></svg></div><div><h4>Content Gap Analysis</h4><p>Woh topics jo competitor cover kar raha hai lekin aap nahi.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--amber)"><svg><use href="#i-bar"/></svg></div><div><h4>Keyword Gap Analysis</h4><p>Multiple competitors vs apni site — missing keyword opportunities.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--navy-deep)"><svg><use href="#i-link"/></svg></div><div><h4>Link Gap Analysis</h4><p>Woh domains jo competitors ko link de rahe hain par aapko nahi.</p></div></div>
+      </div>
+    </section>
+
+    <!-- MODULE 7 -->
+    <section class="module" id="m7">
+      <div class="mod-head">
+        <div class="pos-badge">7</div>
+        <div class="mod-title-wrap">
+          <div class="eyebrow">Writing</div>
+          <h2>Content SEO</h2>
+        </div>
+      </div>
+      <p class="mod-desc">Content sirf likhna kaafi nahi — usse search engines aur users dono ke liye structured, authoritative aur helpful banana zaroori hai.</p>
+      <div class="grid">
+        <div class="card"><div class="icon-badge" style="background:var(--coral)"><svg><use href="#i-file"/></svg></div><div><h4>SEO Article Likhna</h4><p>Keyword-focused, structured (H1-H2-H3), scannable format me content likhna.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--teal)"><svg><use href="#i-shield"/></svg></div><div><h4>E-E-A-T</h4><p>Experience, Expertise, Authoritativeness, Trustworthiness — Google ki quality signal.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--amber)"><svg><use href="#i-bot"/></svg></div><div><h4>NLP Optimization</h4><p>Natural language jo Google ke NLP algorithms achi tarah samajh sakein.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--navy-deep)"><svg><use href="#i-layers"/></svg></div><div><h4>Semantic SEO</h4><p>Sirf exact keyword nahi, related concepts aur meaning cover karna.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--coral)"><svg><use href="#i-star"/></svg></div><div><h4>Topical Authority</h4><p>Ek niche ke poore topic cluster par deep, comprehensive coverage.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--teal)"><svg><use href="#i-link"/></svg></div><div><h4>Internal Linking</h4><p>Apni hi site ke related pages ko link karna — authority flow ke liye.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--amber)"><svg><use href="#i-link"/></svg></div><div><h4>External Linking</h4><p>Trustworthy, authoritative sources ko cite karna.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--navy-deep)"><svg><use href="#i-message"/></svg></div><div><h4>FAQ Schema</h4><p>Common questions ko structured data ke sath SERP me feature karna.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--coral)"><svg><use href="#i-layers"/></svg></div><div><h4>Content Clusters</h4><p>Ek main topic ke around related sub-topics ka group.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--teal)"><svg><use href="#i-target"/></svg></div><div><h4>Pillar Pages</h4><p>Broad topic ko cover karne wala central hub page jo sub-topics ko link karta hai.</p></div></div>
+      </div>
+
+      <div class="subhead"><h3>▸ Topic Cluster Model</h3><div class="line"></div></div>
+      <div class="chart-panel">
+        <div class="cp-head"><h4>Pillar Page + Cluster Content Structure</h4><span class="note">hub &amp; spoke model</span></div>
+        <div class="pillar-wrap">
+          <svg viewBox="0 0 560 300" width="100%" style="max-width:560px">
+            <g stroke="#C9C0A6" stroke-width="1.6">
+              <line x1="280" y1="150" x2="90" y2="55"/>
+              <line x1="280" y1="150" x2="470" y2="55"/>
+              <line x1="280" y1="150" x2="70" y2="150"/>
+              <line x1="280" y1="150" x2="490" y2="150"/>
+              <line x1="280" y1="150" x2="90" y2="245"/>
+              <line x1="280" y1="150" x2="470" y2="245"/>
+            </g>
+            <circle cx="280" cy="150" r="46" fill="#FF5A3C"/>
+            <text x="280" y="146" text-anchor="middle" fill="#fff" font-family="Fraunces,serif" font-size="13" font-weight="700">Pillar</text>
+            <text x="280" y="161" text-anchor="middle" fill="#fff" font-family="Inter" font-size="10">Page</text>
+            <g font-family="JetBrains Mono" font-size="10" fill="#15202E">
+              <circle cx="90" cy="55" r="26" fill="#0E9C90"/><text x="90" y="59" text-anchor="middle" fill="#fff" font-size="9">Cluster</text>
+              <circle cx="470" cy="55" r="26" fill="#0E9C90"/><text x="470" y="59" text-anchor="middle" fill="#fff" font-size="9">Cluster</text>
+              <circle cx="70" cy="150" r="26" fill="#E39B33"/><text x="70" y="154" text-anchor="middle" fill="#fff" font-size="9">Cluster</text>
+              <circle cx="490" cy="150" r="26" fill="#E39B33"/><text x="490" y="154" text-anchor="middle" fill="#fff" font-size="9">Cluster</text>
+              <circle cx="90" cy="245" r="26" fill="#0E9C90"/><text x="90" y="249" text-anchor="middle" fill="#fff" font-size="9">Cluster</text>
+              <circle cx="470" cy="245" r="26" fill="#0E9C90"/><text x="470" y="249" text-anchor="middle" fill="#fff" font-size="9">Cluster</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODULE 8 -->
+    <section class="module" id="m8">
+      <div class="mod-head">
+        <div class="pos-badge">8</div>
+        <div class="mod-title-wrap">
+          <div class="eyebrow">Under the Hood</div>
+          <h2>Technical SEO</h2>
+        </div>
+      </div>
+      <p class="mod-desc">Website ka structural aur backend health — jisse search engines aasani se crawl, index aur render kar sakein.</p>
+      <div class="grid">
+        <div class="card"><div class="icon-badge" style="background:var(--coral)"><svg><use href="#i-file"/></svg></div><div><h4>Robots.txt</h4><p>Bots ko batata hai kaunse pages crawl karne hain ya nahi.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--teal)"><svg><use href="#i-layers"/></svg></div><div><h4>XML Sitemap</h4><p>Site ke saare important URLs ki list jo search engines ko submit hoti hai.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--amber)"><svg><use href="#i-link"/></svg></div><div><h4>Canonical</h4><p>Duplicate content me se "asli" version batane wala tag.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--navy-deep)"><svg><use href="#i-repeat"/></svg></div><div><h4>Pagination</h4><p>Multi-page content series ko properly link karna.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--coral)"><svg><use href="#i-check"/></svg></div><div><h4>Indexing</h4><p>Google ke database me page ka shamil hona.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--teal)"><svg><use href="#i-clock"/></svg></div><div><h4>Crawl Budget</h4><p>Google ek site par kitna crawl time/resources spend karta hai.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--amber)"><svg><use href="#i-zap"/></svg></div><div><h4>Core Web Vitals</h4><p>LCP, INP, CLS — user experience/speed ke Google metrics.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--navy-deep)"><svg><use href="#i-code"/></svg></div><div><h4>Schema Markup</h4><p>Structured data jo rich results (stars, FAQ, etc.) enable karta hai.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--coral)"><svg><use href="#i-shield"/></svg></div><div><h4>HTTPS</h4><p>Secure connection — trust aur ranking dono ke liye zaroori.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--teal)"><svg><use href="#i-users"/></svg></div><div><h4>Mobile Friendly</h4><p>Google mobile-first indexing use karta hai — responsive design must hai.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--amber)"><svg><use href="#i-link"/></svg></div><div><h4>Broken Links</h4><p>404 errors jo UX aur crawl efficiency dono kharab karte hain.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--navy-deep)"><svg><use href="#i-repeat"/></svg></div><div><h4>Redirects</h4><p>301/302 — old URLs ko naye pe sahi tareeqe se le jaana.</p></div></div>
+      </div>
+
+      <div class="chart-panel">
+        <div class="cp-head"><h4>Core Web Vitals — Threshold Ranges</h4><span class="note">Google official thresholds</span></div>
+        <div class="range-chart">
+          <div class="row">
+            <div class="head">LCP — Largest Contentful Paint <span>seconds</span></div>
+            <div class="segments"><div class="seg" style="width:50%;background:#0E9C90"></div><div class="seg" style="width:30%;background:#E39B33"></div><div class="seg" style="width:20%;background:#FF5A3C"></div></div>
+            <div class="marks"><span>0 – 2.5s Good</span><span>2.5 – 4.0s Needs Work</span><span>4.0s+ Poor</span></div>
+          </div>
+          <div class="row">
+            <div class="head">INP — Interaction to Next Paint <span>milliseconds</span></div>
+            <div class="segments"><div class="seg" style="width:40%;background:#0E9C90"></div><div class="seg" style="width:35%;background:#E39B33"></div><div class="seg" style="width:25%;background:#FF5A3C"></div></div>
+            <div class="marks"><span>0 – 200ms Good</span><span>200 – 500ms Needs Work</span><span>500ms+ Poor</span></div>
+          </div>
+          <div class="row">
+            <div class="head">CLS — Cumulative Layout Shift <span>score</span></div>
+            <div class="segments"><div class="seg" style="width:40%;background:#0E9C90"></div><div class="seg" style="width:35%;background:#E39B33"></div><div class="seg" style="width:25%;background:#FF5A3C"></div></div>
+            <div class="marks"><span>0 – 0.1 Good</span><span>0.1 – 0.25 Needs Work</span><span>0.25+ Poor</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODULE 9 -->
+    <section class="module" id="m9">
+      <div class="mod-head">
+        <div class="pos-badge">9</div>
+        <div class="mod-title-wrap">
+          <div class="eyebrow">Authority</div>
+          <h2>Link Building</h2>
+        </div>
+      </div>
+      <p class="mod-desc">Doosri quality websites se backlinks earn karne ki strategies — off-page authority ka sabse bada driver.</p>
+      <div class="grid">
+        <div class="card"><div class="icon-badge" style="background:var(--coral)"><svg><use href="#i-file"/></svg></div><div><h4>Guest Posting</h4><p>Doosri sites par article likh kar backlink pana.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--teal)"><svg><use href="#i-message"/></svg></div><div><h4>HARO / Digital PR</h4><p>Journalists ko quotes dekar high-authority media links.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--amber)"><svg><use href="#i-link"/></svg></div><div><h4>Broken Link Building</h4><p>Dead links dhoond kar apna resource suggest karna.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--navy-deep)"><svg><use href="#i-book"/></svg></div><div><h4>Resource Pages</h4><p>Curated resource lists me apna link add karwana.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--coral)"><svg><use href="#i-message"/></svg></div><div><h4>Outreach</h4><p>Personalized emails se webmasters ko contact karna.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--teal)"><svg><use href="#i-trend"/></svg></div><div><h4>Skyscraper Technique</h4><p>Existing top content se behtar version banakar uske linkers ko pitch karna.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--amber)"><svg><use href="#i-repeat"/></svg></div><div><h4>Link Reclamation</h4><p>Mentions jo link nahi hain unhe link me convert karwana.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--navy-deep)"><svg><use href="#i-pin"/></svg></div><div><h4>Local Citations</h4><p>Business directories me consistent NAP listing.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--coral)"><svg><use href="#i-globe"/></svg></div><div><h4>Web 2.0</h4><p>Free platforms (Medium, Blogger) par content publish karna.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--teal)"><svg><use href="#i-users"/></svg></div><div><h4>Profile Links</h4><p>Forums/community profiles se low-effort supplementary links.</p></div></div>
+      </div>
+
+      <div class="chart-panel">
+        <div class="cp-head"><h4>Link Building Tactics — Effort vs Impact</h4><span class="note">general strategic guidance</span></div>
+        <div class="dualbar-chart">
+          <div class="row"><div class="name">Digital PR / HARO</div>
+            <div class="track"><div class="lbl">Impact</div><div class="bg"><div class="fill" style="width:90%;background:#FF5A3C"></div></div></div>
+            <div class="track"><div class="lbl">Effort</div><div class="bg"><div class="fill" style="width:80%;background:#15202E"></div></div></div>
+          </div>
+          <div class="row"><div class="name">Guest Posting</div>
+            <div class="track"><div class="lbl">Impact</div><div class="bg"><div class="fill" style="width:70%;background:#FF5A3C"></div></div></div>
+            <div class="track"><div class="lbl">Effort</div><div class="bg"><div class="fill" style="width:60%;background:#15202E"></div></div></div>
+          </div>
+          <div class="row"><div class="name">Skyscraper Technique</div>
+            <div class="track"><div class="lbl">Impact</div><div class="bg"><div class="fill" style="width:80%;background:#FF5A3C"></div></div></div>
+            <div class="track"><div class="lbl">Effort</div><div class="bg"><div class="fill" style="width:70%;background:#15202E"></div></div></div>
+          </div>
+          <div class="row"><div class="name">Broken Link Building</div>
+            <div class="track"><div class="lbl">Impact</div><div class="bg"><div class="fill" style="width:60%;background:#FF5A3C"></div></div></div>
+            <div class="track"><div class="lbl">Effort</div><div class="bg"><div class="fill" style="width:50%;background:#15202E"></div></div></div>
+          </div>
+          <div class="row"><div class="name">Resource Pages</div>
+            <div class="track"><div class="lbl">Impact</div><div class="bg"><div class="fill" style="width:50%;background:#FF5A3C"></div></div></div>
+            <div class="track"><div class="lbl">Effort</div><div class="bg"><div class="fill" style="width:40%;background:#15202E"></div></div></div>
+          </div>
+          <div class="row"><div class="name">Local Citations</div>
+            <div class="track"><div class="lbl">Impact</div><div class="bg"><div class="fill" style="width:40%;background:#FF5A3C"></div></div></div>
+            <div class="track"><div class="lbl">Effort</div><div class="bg"><div class="fill" style="width:30%;background:#15202E"></div></div></div>
+          </div>
+          <div class="row"><div class="name">Web 2.0</div>
+            <div class="track"><div class="lbl">Impact</div><div class="bg"><div class="fill" style="width:30%;background:#FF5A3C"></div></div></div>
+            <div class="track"><div class="lbl">Effort</div><div class="bg"><div class="fill" style="width:20%;background:#15202E"></div></div></div>
+          </div>
+          <div class="row"><div class="name">Profile Links</div>
+            <div class="track"><div class="lbl">Impact</div><div class="bg"><div class="fill" style="width:20%;background:#FF5A3C"></div></div></div>
+            <div class="track"><div class="lbl">Effort</div><div class="bg"><div class="fill" style="width:10%;background:#15202E"></div></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODULE 10 -->
+    <section class="module" id="m10">
+      <div class="mod-head">
+        <div class="pos-badge">10</div>
+        <div class="mod-title-wrap">
+          <div class="eyebrow">Near Me</div>
+          <h2>Local SEO</h2>
+        </div>
+      </div>
+      <p class="mod-desc">Physical location wale businesses ke liye local search aur Maps me visibility badhana.</p>
+      <div class="grid">
+        <div class="card"><div class="icon-badge" style="background:var(--coral)"><svg><use href="#i-pin"/></svg></div><div><h4>Google Business Profile</h4><p>Local presence ka sabse important asset — accurate info, photos, posts.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--teal)"><svg><use href="#i-file"/></svg></div><div><h4>NAP</h4><p>Name, Address, Phone — har jagah exactly consistent hona chahiye.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--amber)"><svg><use href="#i-star"/></svg></div><div><h4>Reviews</h4><p>Star ratings + genuine reviews trust aur ranking dono badhate hain.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--navy-deep)"><svg><use href="#i-globe"/></svg></div><div><h4>Local Citations</h4><p>Directories (Yelp, Justdial etc.) me listing consistency.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--coral)"><svg><use href="#i-search"/></svg></div><div><h4>Local Keywords</h4><p>"near me" + city/area specific targeting.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--teal)"><svg><use href="#i-pin"/></svg></div><div><h4>Maps Ranking</h4><p>Local Pack (top 3) me aane ke signals: proximity, relevance, prominence.</p></div></div>
+      </div>
+
+      <div class="chart-panel">
+        <div class="cp-head"><h4>Local Pack Ranking Signal Categories</h4><span class="note">conceptual grouping</span></div>
+        <div class="donut-chart">
+          <svg width="220" height="220" viewBox="0 0 260 260">
+            <path d="M20.00,130.00 A110,110 0 0 1 163.99,25.38 L151.01,65.33 A68,68 0 0 0 62.00,130.00 Z" fill="#FF5A3C" transform="translate(15,15)"/>
+            <path d="M163.99,25.38 A110,110 0 0 1 240.00,130.00 L198.00,130.00 A68,68 0 0 0 151.01,65.33 Z" fill="#0E9C90" transform="translate(15,15)"/>
+            <path d="M240.00,130.00 A110,110 0 0 1 163.99,234.62 L151.01,194.67 A68,68 0 0 0 198.00,130.00 Z" fill="#E39B33" transform="translate(15,15)"/>
+            <path d="M163.99,234.62 A110,110 0 0 1 49.81,205.30 L80.43,176.55 A68,68 0 0 0 151.01,194.67 Z" fill="#15202E" transform="translate(15,15)"/>
+            <path d="M49.81,205.30 A110,110 0 0 1 20.00,130.00 L62.00,130.00 A68,68 0 0 0 80.43,176.55 Z" fill="#8C6D3F" transform="translate(15,15)"/>
+            <text x="130" y="124" text-anchor="middle" font-family="Fraunces,serif" font-size="26" font-weight="700" fill="#15202E">5</text>
+            <text x="130" y="144" text-anchor="middle" font-family="JetBrains Mono" font-size="11" fill="#5B6472">Signals</text>
+          </svg>
+          <div class="legend">
+            <div class="li"><span class="sw" style="background:#FF5A3C"></span>GBP Signals<b>30%</b></div>
+            <div class="li"><span class="sw" style="background:#0E9C90"></span>Reviews<b>20%</b></div>
+            <div class="li"><span class="sw" style="background:#E39B33"></span>Backlinks &amp; Citations<b>20%</b></div>
+            <div class="li"><span class="sw" style="background:#15202E"></span>On-Page Local<b>18%</b></div>
+            <div class="li"><span class="sw" style="background:#8C6D3F"></span>Behavioral<b>12%</b></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODULE 11 -->
+    <section class="module" id="m11">
+      <div class="mod-head">
+        <div class="pos-badge">11</div>
+        <div class="mod-title-wrap">
+          <div class="eyebrow">New Frontier</div>
+          <h2>AI SEO</h2>
+        </div>
+      </div>
+      <p class="mod-desc">AI chatbots/answer engines me apne content ko cite aur recommend karwane ki nayi discipline.</p>
+      <div class="grid">
+        <div class="card"><div class="icon-badge" style="background:var(--coral)"><svg><use href="#i-bot"/></svg></div><div><h4>ChatGPT</h4><p>Search + browsing feature me clear, structured answers cite hote hain.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--teal)"><svg><use href="#i-bot"/></svg></div><div><h4>Gemini</h4><p>Google ka AI mode — E-E-A-T aur structured data ko heavily use karta hai.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--amber)"><svg><use href="#i-bot"/></svg></div><div><h4>Claude</h4><p>Deep, well-reasoned content ko prefer karta hai research-style answers me.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--navy-deep)"><svg><use href="#i-bot"/></svg></div><div><h4>Perplexity</h4><p>Citation-first answer engine — clear sourcing wale pages favor karta hai.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--coral)"><svg><use href="#i-file"/></svg></div><div><h4>AI Content Optimization</h4><p>Clear headings, direct answers, data + facts jo AI easily extract kar sake.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--teal)"><svg><use href="#i-message"/></svg></div><div><h4>Prompt Engineering</h4><p>AI tools se better research/content briefs nikalne ka skill.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--amber)"><svg><use href="#i-globe"/></svg></div><div><h4>GEO</h4><p>Generative Engine Optimization — AI answer engines ke liye content optimize karna.</p></div></div>
+      </div>
+    </section>
+
+    <!-- MODULE 12 -->
+    <section class="module" id="m12">
+      <div class="mod-head">
+        <div class="pos-badge">12</div>
+        <div class="mod-title-wrap">
+          <div class="eyebrow">Measurement</div>
+          <h2>Analytics</h2>
+        </div>
+      </div>
+      <p class="mod-desc">SEO ke natije measure karne ke liye tools aur metrics jo har decision ko data-backed banate hain.</p>
+      <div class="grid">
+        <div class="card"><div class="icon-badge" style="background:var(--coral)"><svg><use href="#i-bar"/></svg></div><div><h4>Google Analytics 4</h4><p>User behavior, conversions, traffic sources ka full tracking.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--teal)"><svg><use href="#i-search"/></svg></div><div><h4>Google Search Console</h4><p>Free — clicks, impressions, CTR, position, indexing status.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--amber)"><svg><use href="#i-search"/></svg></div><div><h4>Bing Webmaster</h4><p>Bing ke search performance data ke liye.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--navy-deep)"><svg><use href="#i-pie"/></svg></div><div><h4>Looker Studio</h4><p>Custom, shareable dashboards multiple sources se.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--coral)"><svg><use href="#i-target"/></svg></div><div><h4>Conversion Tracking</h4><p>Traffic ko goals/sales me convert hote hue measure karna.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--teal)"><svg><use href="#i-zap"/></svg></div><div><h4>CTR Analysis</h4><p>Kitne log impression dekh kar click kar rahe hain.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--amber)"><svg><use href="#i-eye"/></svg></div><div><h4>Impressions</h4><p>Kitni baar aapka page SERP me dikha.</p></div></div>
+        <div class="card"><div class="icon-badge" style="background:var(--navy-deep)"><svg><use href="#i-trend"/></svg></div><div><h4>Average Position</h4><p>Keywords ki average ranking position over time.</p></div></div>
+      </div>
+
+      <div class="chart-panel">
+        <div class="cp-head"><h4>Sample GSC Performance Trend</h4><span class="note">illustrative monthly data</span></div>
+        <div class="linechart-legend">
+          <div class="li"><span class="sw" style="background:#FF5A3C"></span>Clicks</div>
+          <div class="li"><span class="sw" style="background:#0E9C90"></span>Impressions (÷100)</div>
+        </div>
+        <svg viewBox="0 0 600 224" width="100%" style="max-width:100%">
+          <g stroke="#E6DFCC" stroke-width="1">
+            <line x1="10" y1="34" x2="590" y2="34"/>
+            <line x1="10" y1="88" x2="590" y2="88"/>
+            <line x1="10" y1="142" x2="590" y2="142"/>
+            <line x1="10" y1="196" x2="590" y2="196"/>
+          </g>
+          <path d="M10.0,176.0 L10.0,140.4 L62.7,131.5 L115.5,125.6 L168.2,113.8 L220.9,98.9 L273.6,87.1 L326.4,75.2 L379.1,63.4 L431.8,51.5 L484.5,36.7 L537.3,24.8 L590.0,10.0 L590.0,176.0 Z" fill="rgba(255,90,60,.12)"/>
+          <polyline points="10.0,140.4 62.7,131.5 115.5,125.6 168.2,113.8 220.9,98.9 273.6,87.1 326.4,75.2 379.1,63.4 431.8,51.5 484.5,36.7 537.3,24.8 590.0,10.0" fill="none" stroke="#FF5A3C" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+          <polyline points="10.0,139.5 62.7,128.6 115.5,121.3 168.2,107.6 220.9,95.7 273.6,89.4 326.4,75.7 379.1,62.0 431.8,48.3 484.5,39.2 537.3,22.8 590.0,10.0" fill="none" stroke="#0E9C90" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="5 4"/>
+          <g font-family="JetBrains Mono" font-size="10" fill="#5B6472">
+            <text x="10" y="214" text-anchor="start">Jan</text>
+            <text x="115" y="214" text-anchor="middle">Mar</text>
+            <text x="221" y="214" text-anchor="middle">May</text>
+            <text x="326" y="214" text-anchor="middle">Jul</text>
+            <text x="432" y="214" text-anchor="middle">Sep</text>
+            <text x="537" y="214" text-anchor="middle">Nov</text>
+            <text x="590" y="214" text-anchor="end">Dec</text>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <!-- MODULE 13 -->
+    <section class="module" id="m13">
+      <div class="mod-head">
+        <div class="pos-badge">13</div>
+        <div class="mod-title-wrap">
+          <div class="eyebrow">Process</div>
+          <h2>Complete SEO Workflow</h2>
+        </div>
+      </div>
+      <p class="mod-desc">Zero se lekar recurring maintenance tak — poora agency-level step-by-step process.</p>
+      <div class="workflow">
+        <div class="wf-step"><span class="n">STEP 01</span><b>Niche Selection</b></div>
+        <div class="wf-step"><span class="n">STEP 02</span><b>Competitor Research</b></div>
+        <div class="wf-step"><span class="n">STEP 03</span><b>Keyword Research</b></div>
+        <div class="wf-step"><span class="n">STEP 04</span><b>Website Structure</b></div>
+        <div class="wf-step"><span class="n">STEP 05</span><b>Content Plan</b></div>
+        <div class="wf-step"><span class="n">STEP 06</span><b>On-Page SEO</b></div>
+        <div class="wf-step"><span class="n">STEP 07</span><b>Technical SEO</b></div>
+        <div class="wf-step"><span class="n">STEP 08</span><b>Internal Linking</b></div>
+        <div class="wf-step"><span class="n">STEP 09</span><b>Schema</b></div>
+        <div class="wf-step"><span class="n">STEP 10</span><b>Link Building</b></div>
+        <div class="wf-step"><span class="n">STEP 11</span><b>Rank Tracking</b></div>
+        <div class="wf-step"><span class="n">STEP 12</span><b>Monthly SEO Audit</b></div>
+      </div>
+    </section>
+
+    <!-- MODULE 14 -->
+    <section class="module" id="m14">
+      <div class="mod-head">
+        <div class="pos-badge">14</div>
+        <div class="mod-title-wrap">
+          <div class="eyebrow">Reference</div>
+          <h2>Complete SEO Checklists</h2>
+        </div>
+      </div>
+      <p class="mod-desc">Har platform/scenario ke liye ready-to-use checklists.</p>
+
+      <div class="checklist-panel">
+        <h4>New Website SEO Checklist <span class="badge">SETUP</span></h4>
+        <ul>
+          <li>GSC + GA4 setup</li><li>XML sitemap submit</li><li>Robots.txt configure</li>
+          <li>SSL/HTTPS enable</li><li>Mobile responsiveness check</li><li>Site structure/navigation plan</li>
+          <li>Core Web Vitals baseline</li><li>404 & redirect setup</li>
+        </ul>
+      </div>
+      <div class="checklist-panel">
+        <h4>Blog SEO Checklist <span class="badge">CONTENT</span></h4>
+        <ul>
+          <li>Target keyword in title/H1</li><li>Meta title & description</li><li>Optimized URL slug</li>
+          <li>Internal + external links</li><li>Image alt text</li><li>FAQ schema (if applicable)</li>
+          <li>Readable formatting (H2/H3)</li><li>CTA at the end</li>
+        </ul>
+      </div>
+      <div class="checklist-panel">
+        <h4>Local SEO Checklist <span class="badge">LOCAL</span></h4>
+        <ul>
+          <li>Google Business Profile complete</li><li>NAP consistency everywhere</li><li>Local citations built</li>
+          <li>Customer reviews strategy</li><li>Local keywords in content</li><li>City/area landing pages</li>
+        </ul>
+      </div>
+      <div class="checklist-panel">
+        <h4>WooCommerce SEO Checklist <span class="badge">ECOM</span></h4>
+        <ul>
+          <li>Product schema markup</li><li>Unique product descriptions</li><li>Category page optimization</li>
+          <li>Image compression</li><li>Duplicate content (filters) handled</li><li>Breadcrumbs enabled</li>
+        </ul>
+      </div>
+      <div class="checklist-panel">
+        <h4>WordPress SEO Checklist <span class="badge">CMS</span></h4>
+        <ul>
+          <li>SEO plugin configured (Rank Math/Yoast)</li><li>Permalink structure clean</li><li>Caching plugin active</li>
+          <li>Image optimization</li><li>Broken plugin/theme cleanup</li><li>Schema markup enabled</li>
+        </ul>
+      </div>
+      <div class="checklist-panel">
+        <h4>Shopify SEO Checklist <span class="badge">ECOM</span></h4>
+        <ul>
+          <li>Theme speed optimization</li><li>Alt text on product images</li><li>URL handles cleaned</li>
+          <li>Collection page SEO</li><li>App bloat minimized</li><li>Structured data verified</li>
+        </ul>
+      </div>
+      <div class="checklist-panel">
+        <h4>Technical SEO Checklist <span class="badge">TECH</span></h4>
+        <ul>
+          <li>Crawl errors resolved</li><li>Canonical tags correct</li><li>Core Web Vitals passing</li>
+          <li>Sitemap up to date</li><li>Structured data valid</li><li>No orphan pages</li>
+        </ul>
+      </div>
+      <div class="checklist-panel">
+        <h4>Content SEO Checklist <span class="badge">CONTENT</span></h4>
+        <ul>
+          <li>Search intent matched</li><li>E-E-A-T signals present</li><li>Topical depth covered</li>
+          <li>Internal linking done</li><li>Content freshness maintained</li><li>Multimedia included</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- MODULE 15 -->
+    <section class="module" id="m15">
+      <div class="mod-head">
+        <div class="pos-badge">15</div>
+        <div class="mod-title-wrap">
+          <div class="eyebrow">Applied</div>
+          <h2>Real Case Studies (Live Approach)</h2>
+        </div>
+      </div>
+      <p class="mod-desc">Real-world scenario me har module ko step-by-step kaise apply karte hain — practical walkthroughs.</p>
+      <div class="case-grid">
+        <div class="case-card">
+          <div class="tag">Case 01</div>
+          <h4>Keyword Research (Live)</h4>
+          <ol>
+            <li>Seed keyword define karo</li>
+            <li>Ahrefs/SEMrush me volume + difficulty check</li>
+            <li>Intent classify karo (info/commercial/transactional)</li>
+            <li>Long-tail variations shortlist karo</li>
+          </ol>
+        </div>
+        <div class="case-card">
+          <div class="tag">Case 02</div>
+          <h4>Competitor Analysis (Live)</h4>
+          <ol>
+            <li>Top 5 SERP competitors list karo</li>
+            <li>Unke keywords + backlinks export karo</li>
+            <li>Content gaps identify karo</li>
+            <li>Actionable opportunities note karo</li>
+          </ol>
+        </div>
+        <div class="case-card">
+          <div class="tag">Case 03</div>
+          <h4>Article Optimization (Live)</h4>
+          <ol>
+            <li>Surfer/NeuronWriter se content score check</li>
+            <li>Missing NLP terms add karo</li>
+            <li>Headings restructure karo</li>
+            <li>Internal links insert karo</li>
+          </ol>
+        </div>
+        <div class="case-card">
+          <div class="tag">Case 04</div>
+          <h4>Technical Audit (Live)</h4>
+          <ol>
+            <li>Screaming Frog se full crawl chalao</li>
+            <li>Broken links/redirects fix karo</li>
+            <li>Core Web Vitals score improve karo</li>
+            <li>Schema errors resolve karo</li>
+          </ol>
+        </div>
+        <div class="case-card">
+          <div class="tag">Case 05</div>
+          <h4>Backlink Analysis (Live)</h4>
+          <ol>
+            <li>Current backlink profile export karo</li>
+            <li>Toxic links identify + disavow karo</li>
+            <li>Competitor link gaps compare karo</li>
+            <li>Outreach targets shortlist karo</li>
+          </ol>
+        </div>
+        <div class="case-card">
+          <div class="tag">Case 06</div>
+          <h4>Ranking Strategy (Live)</h4>
+          <ol>
+            <li>Current rankings baseline lo</li>
+            <li>Low-hanging fruit keywords (position 5-15) target karo</li>
+            <li>On-page + link building combine karo</li>
+            <li>30/60/90-day tracking plan banao</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      SEO 0 to Hero — Complete A to Z Master Guide · Beginner se Agency Level tak · 2026
+      <div class="badge-row" style="justify-content:center;">
+        <span class="pill">On-Page</span><span class="pill">Off-Page</span><span class="pill">Technical</span><span class="pill">Local</span><span class="pill">AI SEO / GEO</span>
+      </div>
+    </footer>
+
+  </main>
+</div>
+
+
+</body>
+</html>
